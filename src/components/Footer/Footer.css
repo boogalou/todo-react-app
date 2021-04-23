@@ -1,0 +1,21 @@
+.app-form {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-text {
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid #dce4ec;
+    width: 100%;
+    margin-right: 15px;
+    border-radius: 2em;
+    padding: 5px 10px;
+    transition: border 250ms ease-out;
+}
+
+.input-text:focus {
+    border: 1px solid;
+    outline: none;
+}

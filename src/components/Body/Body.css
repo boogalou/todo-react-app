@@ -1,0 +1,36 @@
+.app-body {
+    /* http://cssreference.io/flexbox/#flex-grow    */
+    /* Since parent has space-between, allows app-body to grow    */
+    flex-grow: 1;
+    max-height: 600px;
+    overflow-x: hidden;
+    /*overflow-y: scroll;*/
+}
+
+.todo-list:first-of-type {
+    border-top: 1px solid #f5f4f4;
+}
+
+.list-item-view {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.title.done {
+    text-decoration: line-through;
+    color: navy;
+
+}
+
+.btn-block {
+    display: flex;
+    gap: 3px;
+}

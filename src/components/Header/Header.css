@@ -1,0 +1,18 @@
+.app-header {
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+
+.today {}
+
+.task-count {
+    align-self: center;
+    text-align: center;
+}
+
+.task-count span  {
+    margin-left: 25px;
+    align-self: center;
+}
