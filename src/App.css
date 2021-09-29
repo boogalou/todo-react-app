@@ -35,9 +35,24 @@ li {
   transition: 250ms ease-out;
 }
 
-.btn:hover {
+.btn-done {
+  margin-right: 10px;
+}
+
+.btn-add:hover {
   color: #fff;
-  background: #e74c3c;
+  background: #5D8233;
+}
+
+.btn-done:hover {
+  color: #fff;
+  background: #5D8233;
+}
+
+
+.btn-delete:hover {
+  color: #fff;
+  background: #CD113B;
 }
 
 .btn:focus {
@@ -48,7 +63,7 @@ li {
 .app-container {
   width: 400px;
   min-height: 500px;
-  background-color: #bae5d5;
+  background-color: #CFDAC8;
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
   position: relative;
   border-radius: 1em;
@@ -58,26 +73,11 @@ li {
   justify-content: space-between;
 }
 
-/** 
- * Helpers
- */
 
 
 
 
-/*.done {*/
-/*  !* Cannot use transition with text-decoration. *!*/
-/*}*/
-
-/*.item .done {*/
-/*  text-decoration: line-through;*/
-/*  !* Cannot use transition with text-decoration. *!*/
-/*}*/
-
-
-
-
-/** 
+/*
  * Media Queries
  */
 
