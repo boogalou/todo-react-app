@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, DragEvent } from 'react';
 import { useAppDispatch } from '../../hooks/useDispatch';
 import { completedTask, removeTask } from '../../bus/todos/action';
 
@@ -21,18 +21,22 @@ export const BodyItem: FC<BodyItemProps> = ({id, title, completed}: BodyItemProp
 
   return (
     <>
-      <li className="todo-list">
+      <li
+        className="todo-list">
         <div className="list-item-view">
           <div className="item">
-            <label className={ completed ? 'title done' : 'title' }>{ title }</label>
+            <label className={ completed ? 'title done' : 'title' }>
+              { title }
+            </label>
           </div>
           <div className="btn-block">
-            <button onClick={ completedTaskHandler }
-                    className="btn btn-done">Ok
+            <button
+              onClick={ completedTaskHandler }
+              className="btn btn-done">Ok
             </button>
-
-            <button onClick={ removeTaskHandler }
-                    className="btn btn-delete">Del.
+            <button
+              onClick={ removeTaskHandler }
+              className="btn btn-delete">Del.
             </button>
           </div>
         </div>

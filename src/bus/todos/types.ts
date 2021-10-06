@@ -45,6 +45,24 @@ export type  addTextTaskActionAction = {
   payload: string
 }
 
+export const SHOW_ALL_TASKS = 'SHOW_ALL_TASKS';
+export type showAllTasksAction = {
+  type: typeof SHOW_ALL_TASKS;
+  payload: string;
+}
+
+export const SHOW_COMPLETED_TASKS = 'SHOW_CONPLETED_TASKS';
+export type showCompletedTasksAction = {
+  type: typeof SHOW_COMPLETED_TASKS;
+  payload: string;
+}
+
+export const SHOW_CURRENT_TASKS = 'SHOW_CURRENT_TASKS';
+export type showCurrentTasksAction = {
+  type: typeof SHOW_CURRENT_TASKS;
+  payload: string;
+}
+
 // Async
 export const TODOS_FETCH_ASYNC = 'TODOS_FETCH_ASYNC';
 type TodosFetchAsyncAction = {
@@ -61,3 +79,6 @@ export type TodosActionTypes =
   | stopFetchingAction
   | dataFillingAction
   | TodosFetchAsyncAction
+  | showAllTasksAction
+  | showCompletedTasksAction
+  | showCurrentTasksAction

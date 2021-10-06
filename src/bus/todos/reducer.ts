@@ -1,15 +1,25 @@
-import { ADD_TASK, ADD_TEXT_TASK, COMPLETED_TASK, REMOVE_TASK, TodosActionTypes, TodosType } from './types';
-
-
+import {
+  ADD_TASK,
+  ADD_TEXT_TASK,
+  COMPLETED_TASK,
+  REMOVE_TASK,
+  SHOW_ALL_TASKS,
+  SHOW_CURRENT_TASKS,
+  SHOW_COMPLETED_TASKS,
+  TodosActionTypes,
+  TodosType
+} from './types';
 
 
 type TodosStateTypes = {
   todos: TodosType[];
+  filters: string
   titleMsg: string,
 }
 
 const initialState: TodosStateTypes = {
   todos: [],
+  filters: 'all',
   titleMsg: '',
 };
 
@@ -32,7 +42,7 @@ export const todosReducer = (state = initialState, action: TodosActionTypes): To
       return {
         ...state,
         titleMsg: action.payload,
-      }
+      };
 
     case REMOVE_TASK:
       return {
@@ -48,7 +58,27 @@ export const todosReducer = (state = initialState, action: TodosActionTypes): To
           : todo)
       };
 
+    case SHOW_ALL_TASKS:
+      return {
+        ...state,
+        filters: action.payload,
+      };
+
+    case SHOW_COMPLETED_TASKS:
+      return {
+        ...state,
+        filters: action.payload,
+      };
+
+    case SHOW_CURRENT_TASKS:
+      return {
+        ...state,
+        filters: action.payload,
+      };
+
     default:
-      return state;
+    // const x: never = action;
+
   }
+  return state;
 };

@@ -1,21 +1,27 @@
 import {
   ADD_TASK,
   ADD_TEXT_TASK,
-  COMPLETED_TASK,
-  REMOVE_TASK,
-  START_FETCHING,
-  STOP_FETCHING,
-  DATA_FILLING,
-  TODOS_FETCH_ASYNC,
   addTaskAction,
   addTextTaskActionAction,
+  COMPLETED_TASK,
   completedTaskAction,
-  removeTaskAction,
-  startFetchingAction,
-  stopFetchingAction,
+  DATA_FILLING,
   dataFillingAction,
-  TodosType,
+  REMOVE_TASK,
+  removeTaskAction,
+  SHOW_ALL_TASKS,
+  SHOW_COMPLETED_TASKS,
+  SHOW_CURRENT_TASKS,
+  showAllTasksAction,
+  showCompletedTasksAction,
+  showCurrentTasksAction,
+  START_FETCHING,
+  startFetchingAction,
+  STOP_FETCHING,
+  stopFetchingAction,
+  TODOS_FETCH_ASYNC,
   TodosActionTypes,
+  TodosType,
 } from './types';
 
 export const addTask = (): addTaskAction => ({
@@ -48,6 +54,21 @@ export const stopFetching = (): stopFetchingAction => ({
 export const dataFilling = (payload: TodosType[]): dataFillingAction => ({
   type: DATA_FILLING,
   payload
+});
+
+export const showAllTasks = (payload: string): showAllTasksAction => ({
+  type: SHOW_ALL_TASKS,
+  payload,
+});
+
+export const showCompletedTasks = (payload: string): showCompletedTasksAction => ({
+  type: SHOW_COMPLETED_TASKS,
+  payload
+});
+
+export const showCurrentTasks = (payload: string): showCurrentTasksAction => ({
+  type: SHOW_CURRENT_TASKS,
+  payload,
 });
 
 // Async

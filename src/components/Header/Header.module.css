@@ -1,0 +1,31 @@
+.today h2 {
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.task__count {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 6px 20px;
+    background: none;
+    border: none;
+    transition: 250ms ease-out;
+    border-radius: 20px;
+    border: solid 1px black;
+}
+
+/*.active {*/
+/*    border-radius: 20px;*/
+/*    border: solid 1px black;*/
+/*}*/
+
+
+.btn__total, .btn__active, .btn__completed {}
