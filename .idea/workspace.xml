@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bus/todos/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bus/todos/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bus/todos/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bus/todos/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bus/todos/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bus/todos/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/Body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Body/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +60,8 @@
       <workItem from="1633170676169" duration="1070000" />
       <workItem from="1633185162473" duration="734000" />
       <workItem from="1633473427904" duration="4054000" />
-      <workItem from="1633514821789" duration="24422000" />
+      <workItem from="1633514821789" duration="26494000" />
+      <workItem from="1633593327057" duration="15824000" />
     </task>
     <servers />
   </component>

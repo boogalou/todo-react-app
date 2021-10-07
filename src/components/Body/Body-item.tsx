@@ -1,5 +1,5 @@
-import React, { FC, DragEvent } from 'react';
-import { useAppDispatch } from '../../hooks/useDispatch';
+import React, { FC, useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../../hooks/useDispatch';
 import { completedTask, removeTask } from '../../bus/todos/action';
 
 type BodyItemProps = {
@@ -32,7 +32,7 @@ export const BodyItem: FC<BodyItemProps> = ({id, title, completed}: BodyItemProp
           <div className="btn-block">
             <button
               onClick={ completedTaskHandler }
-              className="btn btn-done">Ok
+              className={ completed ? 'btn btn-done active' : 'btn btn-done' }>Ok
             </button>
             <button
               onClick={ removeTaskHandler }

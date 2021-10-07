@@ -16,16 +16,21 @@
     font-size: 15px;
     padding: 6px 20px;
     background: none;
-    border: none;
     transition: 250ms ease-out;
     border-radius: 20px;
     border: solid 1px black;
 }
 
-/*.active {*/
-/*    border-radius: 20px;*/
-/*    border: solid 1px black;*/
-/*}*/
+.btn:hover {
+    background: #c2d7ad;
+}
+
+.active {
+    border-radius: 20px;
+    border: solid 1px black;
+    background: #5D8233;
+    color: white;
+}
 
 
 .btn__total, .btn__active, .btn__completed {}

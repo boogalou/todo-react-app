@@ -26,12 +26,13 @@ const initialState: TodosStateTypes = {
 export const todosReducer = (state = initialState, action: TodosActionTypes): TodosStateTypes => {
   switch (action.type) {
     case ADD_TASK:
+      let date = new Date();
       return {
         ...state,
         todos: [
           ...state.todos,
           {
-            id: Math.floor(Math.random() * 1000),
+            id: +date.toISOString().slice(-4, -1),
             title: state.titleMsg,
             completed: false,
           }],
@@ -55,7 +56,7 @@ export const todosReducer = (state = initialState, action: TodosActionTypes): To
         ...state,
         todos: state.todos.map((todo) => todo.id === action.payload
           ? {...todo, completed: !todo.completed}
-          : todo)
+          : todo),
       };
 
     case SHOW_ALL_TASKS:

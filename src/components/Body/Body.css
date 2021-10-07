@@ -21,7 +21,12 @@
     justify-content: space-between;
 }
 
-
+.active {
+    border-radius: 20px;
+    border: solid 1px black;
+    background: #5D8233;
+    color: white;
+}
 
 
 .title.done {
