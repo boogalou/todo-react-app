@@ -15,16 +15,16 @@ export const Footer: FC = () => {
     dispatch(textUpdateTask(text));
   };
 
-  const addTaskHandler = (evt: KeyboardEvent<HTMLInputElement> | MouseEvent<HTMLButtonElement>): void => {
-    if ('type' in evt && evt?.type === 'click') {
+  const [ todo ] = useAppSelector((state) => state.todos.todos.map(todo => todo))
+
+  const addTaskHandler = (
+    evt: KeyboardEvent<HTMLInputElement>
+    | MouseEvent<HTMLButtonElement>): void => {
+    if (('type' in evt && evt?.type === 'click')
+      || ('key' in evt && evt?.key === 'Enter')){
       dispatch(addTask());
+      console.log(todo);
     }
-
-    if ('key' in evt && evt?.key === 'Enter') {
-      dispatch(addTask());
-    }
-
-
   };
 
   return (

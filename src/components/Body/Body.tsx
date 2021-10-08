@@ -3,14 +3,15 @@ import './Body.css';
 import { BodyItem } from './Body-item';
 import { AppState } from '../../init/store';
 import { useAppSelector } from '../../hooks/useDispatch';
+import { filterBtn } from '../Header/Header';
 
 export const Body: FC = () => {
 
   const filters = useAppSelector((state: AppState) => state.todos.filters);
   const todos = useAppSelector((state: AppState) => state.todos.todos.filter(todo => {
-      if (filters === 'done') {
+      if (filters === filterBtn.done) {
         return todo.completed;
-      } else if (filters === 'active') {
+      } else if (filters === filterBtn.active) {
         return !todo.completed;
       } else {
         return todo;

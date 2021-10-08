@@ -1,8 +1,14 @@
-import React, { FC, useState } from 'react';
+import React, { FC, MouseEvent } from 'react';
 import styles from './Header.module.css';
 import { useAppDispatch, useAppSelector } from '../../hooks/useDispatch';
 import { AppState } from '../../init/store';
-import { showAllTasks, showCompletedTasks, showCurrentTasks } from '../../bus/todos/action';
+import { taskFilterSwitch } from '../../bus/todos/action';
+
+export enum filterBtn {
+  all = 'Все',
+  done = 'Завершенные',
+  active = 'Текущие',
+}
 
 const Header: FC = () => {
 
@@ -10,20 +16,13 @@ const Header: FC = () => {
   const completed = [styles.btn, styles.btn__completed].join(' ');
   const current = [styles.btn, styles.btn__active].join(' ');
 
-  const todos = useAppSelector((state: AppState) => state.todos.todos);
+  const todos = useAppSelector((state) => state.todos.todos);
   const isActive = useAppSelector((state) => state.todos.filters);
   const dispatch = useAppDispatch();
 
-  const onAllClickHandler = () => {
-    dispatch(showAllTasks('all'));
-  };
-
-  const onDoneClickHandler = () => {
-    dispatch(showCompletedTasks('done'));
-  };
-
-  const onActiveClickHandler = () => {
-    dispatch(showCurrentTasks('active'));
+  const toggleFilterHandler = (evt: MouseEvent<HTMLButtonElement>) => {
+    let switchPosition = evt.currentTarget.textContent;
+    dispatch(taskFilterSwitch(switchPosition!.slice(0, -2)));
   };
 
   const done = todos.filter(todo => todo.completed).length;
@@ -37,23 +36,26 @@ const Header: FC = () => {
           <div className={ styles.task__count }>
 
             <button
-              className={ isActive === 'all' ? `${all} ${styles.active}` : all  }
-              onClick={ onAllClickHandler }
-            >Все:
+              className={ isActive === filterBtn.all
+                ? `${ all } ${ styles.active }` : all }
+              onClick={ toggleFilterHandler }
+            >{ filterBtn.all }:
               { todos.length }
             </button>
 
             <button
-              className={ isActive === 'done' ? `${completed} ${styles.active}` : all  }
-              onClick={ onDoneClickHandler }
-            >Завершенные:
+              className={ isActive === filterBtn.done
+                ? `${ completed } ${ styles.active }` : all }
+              onClick={ toggleFilterHandler }
+            >{ filterBtn.done }:
               { done }
             </button>
 
             <button
-              className={ isActive === 'active' ? `${current} ${styles.active}` : all }
-              onClick={ onActiveClickHandler }
-            >Текущие:
+              className={ isActive === filterBtn.active
+                ? `${ current } ${ styles.active }` : all }
+              onClick={ toggleFilterHandler }
+            >{ filterBtn.active }:
               { active }
             </button>
 

@@ -9,16 +9,12 @@ import {
   dataFillingAction,
   REMOVE_TASK,
   removeTaskAction,
-  SHOW_ALL_TASKS,
-  SHOW_COMPLETED_TASKS,
-  SHOW_CURRENT_TASKS,
-  showAllTasksAction,
-  showCompletedTasksAction,
-  showCurrentTasksAction,
   START_FETCHING,
   startFetchingAction,
   STOP_FETCHING,
   stopFetchingAction,
+  taskFilterSwitchAction,
+  TASKS_FILTER_SWITCH,
   TODOS_FETCH_ASYNC,
   TodosActionTypes,
   TodosType,
@@ -56,20 +52,11 @@ export const dataFilling = (payload: TodosType[]): dataFillingAction => ({
   payload
 });
 
-export const showAllTasks = (payload: string): showAllTasksAction => ({
-  type: SHOW_ALL_TASKS,
+export const taskFilterSwitch = (payload: string): taskFilterSwitchAction => ({
+  type: TASKS_FILTER_SWITCH,
   payload,
 });
 
-export const showCompletedTasks = (payload: string): showCompletedTasksAction => ({
-  type: SHOW_COMPLETED_TASKS,
-  payload
-});
-
-export const showCurrentTasks = (payload: string): showCurrentTasksAction => ({
-  type: SHOW_CURRENT_TASKS,
-  payload,
-});
 
 // Async
 export const fetchAsync = (): TodosActionTypes => ({

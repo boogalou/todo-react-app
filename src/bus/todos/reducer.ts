@@ -3,9 +3,7 @@ import {
   ADD_TEXT_TASK,
   COMPLETED_TASK,
   REMOVE_TASK,
-  SHOW_ALL_TASKS,
-  SHOW_CURRENT_TASKS,
-  SHOW_COMPLETED_TASKS,
+  TASKS_FILTER_SWITCH,
   TodosActionTypes,
   TodosType
 } from './types';
@@ -19,7 +17,7 @@ type TodosStateTypes = {
 
 const initialState: TodosStateTypes = {
   todos: [],
-  filters: 'all',
+  filters: '',
   titleMsg: '',
 };
 
@@ -59,23 +57,12 @@ export const todosReducer = (state = initialState, action: TodosActionTypes): To
           : todo),
       };
 
-    case SHOW_ALL_TASKS:
+    case TASKS_FILTER_SWITCH:
       return {
         ...state,
         filters: action.payload,
       };
 
-    case SHOW_COMPLETED_TASKS:
-      return {
-        ...state,
-        filters: action.payload,
-      };
-
-    case SHOW_CURRENT_TASKS:
-      return {
-        ...state,
-        filters: action.payload,
-      };
 
     default:
     // const x: never = action;

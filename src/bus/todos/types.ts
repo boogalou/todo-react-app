@@ -21,6 +21,12 @@ export type dataFillingAction = {
   payload: TodosType[];
 }
 
+export const FAIL_FETCHING = 'FAIL_FETCHING';
+export type failFetchingAction = {
+  type: typeof FAIL_FETCHING,
+  payload: string;
+}
+
 
 export const ADD_TASK = 'ADD_TASK';
 export type addTaskAction = {
@@ -45,23 +51,12 @@ export type  addTextTaskActionAction = {
   payload: string
 }
 
-export const SHOW_ALL_TASKS = 'SHOW_ALL_TASKS';
-export type showAllTasksAction = {
-  type: typeof SHOW_ALL_TASKS;
+export const TASKS_FILTER_SWITCH = 'TASKS_FILTER_SWITCH';
+export type taskFilterSwitchAction = {
+  type: typeof TASKS_FILTER_SWITCH;
   payload: string;
 }
 
-export const SHOW_COMPLETED_TASKS = 'SHOW_CONPLETED_TASKS';
-export type showCompletedTasksAction = {
-  type: typeof SHOW_COMPLETED_TASKS;
-  payload: string;
-}
-
-export const SHOW_CURRENT_TASKS = 'SHOW_CURRENT_TASKS';
-export type showCurrentTasksAction = {
-  type: typeof SHOW_CURRENT_TASKS;
-  payload: string;
-}
 
 // Async
 export const TODOS_FETCH_ASYNC = 'TODOS_FETCH_ASYNC';
@@ -79,6 +74,5 @@ export type TodosActionTypes =
   | stopFetchingAction
   | dataFillingAction
   | TodosFetchAsyncAction
-  | showAllTasksAction
-  | showCompletedTasksAction
-  | showCurrentTasksAction
+  | taskFilterSwitchAction
+  | failFetchingAction
