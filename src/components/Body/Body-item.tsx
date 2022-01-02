@@ -1,22 +1,23 @@
-import React, { FC, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/useDispatch';
-import { completedTask, removeTask } from '../../bus/todos/action';
+import React, { FC } from 'react';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { Button } from '../Button/Button';
+import { removeTask, setCompleted } from '../../Reducers/todosSlice';
 
 type BodyItemProps = {
-  id: number;
+  id: string;
   title: string;
   completed: boolean;
 }
 
-export const BodyItem: FC<BodyItemProps> = ({id, title, completed}: BodyItemProps) => {
+export const BodyItem: FC<BodyItemProps> = ({ id, title, completed }: BodyItemProps) => {
 
   const dispatch = useAppDispatch();
 
   const completedTaskHandler = () => {
-    dispatch(completedTask(id));
+    dispatch(setCompleted({id}));
   };
   const removeTaskHandler = () => {
-    dispatch(removeTask(id));
+    dispatch(removeTask({id}));
   };
 
   return (
@@ -25,19 +26,19 @@ export const BodyItem: FC<BodyItemProps> = ({id, title, completed}: BodyItemProp
         className="todo-list">
         <div className="list-item-view">
           <div className="item">
-            <label className={ completed ? 'title done' : 'title' }>
+            <label className={ completed  ? 'title done' : 'title' }>
               { title }
             </label>
           </div>
           <div className="btn-block">
-            <button
-              onClick={ completedTaskHandler }
-              className={ completed ? 'btn btn-done active' : 'btn btn-done' }>Ok
-            </button>
-            <button
-              onClick={ removeTaskHandler }
-              className="btn btn-delete">Del.
-            </button>
+            <Button
+              callback={ completedTaskHandler }
+              className={  completed  ? 'btn-done active' : 'btn-done' }>Ok
+            </Button>
+            <Button
+              callback={ removeTaskHandler }
+              className="btn-delete">Del.
+            </Button>
           </div>
         </div>
       </li>

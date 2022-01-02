@@ -2,17 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useAppSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/todo.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bus/todos/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bus/todos/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bus/todos/saga/workers/fetchTodos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bus/todos/saga/workers/fetchTodos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bus/todos/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bus/todos/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bus/todos/action.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bus/todos/reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bus/todos/saga/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bus/todos/saga/workers/fetchTodos.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bus/todos/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/Body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Body/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useDispatch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAppDispatch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/middleWare.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/rootSaga.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -38,6 +56,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1ynxib3lhs7BCSU6jIA1XeeehA9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,16 +70,36 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
-    <property name="ts.external.directory.path" value="C:\Users\exanz\Documents\Code\JavaScript\Frameworks\FrontEnd\React\todo-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\exanz\Documents\Code\JavaScript\Frameworks\FrontEnd\React\todo-app\src\components\Button" />
+      <recent name="C:\Users\exanz\Documents\Code\JavaScript\Frameworks\FrontEnd\React\todo-app\src\components\Body" />
       <recent name="C:\Users\exanz\Documents\Code\JavaScript\Frameworks\FrontEnd\React\todo-react-app\src\bus\todos" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,7 +114,21 @@
       <workItem from="1633185162473" duration="734000" />
       <workItem from="1633473427904" duration="4054000" />
       <workItem from="1633514821789" duration="26494000" />
-      <workItem from="1633593327057" duration="35802000" />
+      <workItem from="1633593327057" duration="48013000" />
+      <workItem from="1633770649974" duration="2918000" />
+      <workItem from="1633860818307" duration="609000" />
+      <workItem from="1633869044706" duration="32000" />
+      <workItem from="1633870015559" duration="33000" />
+      <workItem from="1633966464761" duration="858000" />
+      <workItem from="1634154687481" duration="1000" />
+      <workItem from="1634421563959" duration="7200000" />
+      <workItem from="1634457780493" duration="17604000" />
+      <workItem from="1634568237212" duration="665000" />
+      <workItem from="1640299657459" duration="1349000" />
+      <workItem from="1640527826177" duration="160000" />
+      <workItem from="1640530144439" duration="361000" />
+      <workItem from="1640869055212" duration="290000" />
+      <workItem from="1641159767601" duration="7368000" />
     </task>
     <servers />
   </component>
@@ -90,6 +145,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

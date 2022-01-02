@@ -1,5 +1,6 @@
 html,
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -25,41 +26,6 @@ li {
   -webkit-padding-start: 0;
 }
 
-.btn {
-  cursor: pointer;
-  font-size: 15px;
-  padding: 5px 10px;
-  border-radius: 2em;
-  background: none;
-  border: 1px solid;
-  transition: 250ms ease-out;
-}
-
-.btn-done {
-  margin-right: 10px;
-}
-
-.btn-add:hover {
-  color: #fff;
-  background: #5D8233;
-}
-
-.btn-done:hover {
-  color: #fff;
-  background: #5D8233;
-}
-
-
-.btn-delete:hover {
-  color: #fff;
-  background: #CD113B;
-}
-
-.btn:focus {
-  color: #fff;
-  outline: none;
-}
-
 .app-container {
   width: 400px;
   min-height: 500px;
@@ -72,10 +38,6 @@ li {
   flex-direction: column;
   justify-content: space-between;
 }
-
-
-
-
 
 /*
  * Media Queries

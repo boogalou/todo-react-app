@@ -1,8 +1,10 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC } from 'react';
 import styles from './Header.module.css';
-import { useAppDispatch, useAppSelector } from '../../hooks/useDispatch';
-import { AppState } from '../../init/store';
-import { taskFilterSwitch } from '../../bus/todos/action';
+
+import { taskFilterSwitch } from '../../Reducers/todosSlice';
+import { Button } from '../Button/Button';
+import { useAppSelector } from '../../hooks/useAppSelector';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
 
 export enum filterBtn {
   all = 'Все',
@@ -10,23 +12,20 @@ export enum filterBtn {
   active = 'Текущие',
 }
 
-const Header: FC = () => {
+export const Header: FC = () => {
 
-  const all = [styles.btn, styles.btn__total].join(' ');
-  const completed = [styles.btn, styles.btn__completed].join(' ');
-  const current = [styles.btn, styles.btn__active].join(' ');
 
-  const todos = useAppSelector((state) => state.todos.todos);
+  const todosData = useAppSelector((state) => state.todos.todosData);
   const isActive = useAppSelector((state) => state.todos.filters);
   const dispatch = useAppDispatch();
 
-  const toggleFilterHandler = (evt: MouseEvent<HTMLButtonElement>) => {
-    let switchPosition = evt.currentTarget.textContent;
-    dispatch(taskFilterSwitch(switchPosition!.slice(0, -2)));
+  const toggleFilterHandler = (evt: React.MouseEvent<HTMLButtonElement>): void => {
+    let switchPosition = evt.currentTarget.textContent!.slice(0, -2);
+    dispatch(taskFilterSwitch(switchPosition));
   };
 
-  const done = todos.filter(todo => todo.completed).length;
-  const active = todos.length - todos.filter(todo => todo.completed).length;
+  const done = todosData.filter(todo => todo.completed).length;
+  const active = todosData.length - todosData.filter(todo => todo.completed).length;
 
   return (
     <>
@@ -35,29 +34,26 @@ const Header: FC = () => {
           <h2>Список Задач</h2>
           <div className={ styles.task__count }>
 
-            <button
-              className={ isActive === filterBtn.all
-                ? `${ all } ${ styles.active }` : all }
-              onClick={ toggleFilterHandler }
+            <Button
+              className={ isActive === filterBtn.all ? `btn-total active` : filterBtn.all }
+              callback={ toggleFilterHandler }
             >{ filterBtn.all }:
-              { todos.length }
-            </button>
+              { todosData.length }
+            </Button>
 
-            <button
-              className={ isActive === filterBtn.done
-                ? `${ completed } ${ styles.active }` : all }
-              onClick={ toggleFilterHandler }
+            <Button
+              className={ isActive === filterBtn.done ? `btn-completed active` : filterBtn.all }
+              callback={ toggleFilterHandler }
             >{ filterBtn.done }:
               { done }
-            </button>
+            </Button>
 
-            <button
-              className={ isActive === filterBtn.active
-                ? `${ current } ${ styles.active }` : all }
-              onClick={ toggleFilterHandler }
+            <Button
+              className={ isActive === filterBtn.active ? `btn active` : filterBtn.all }
+              callback={ toggleFilterHandler }
             >{ filterBtn.active }:
               { active }
-            </button>
+            </Button>
 
           </div>
         </div>
@@ -65,5 +61,3 @@ const Header: FC = () => {
     </>
   );
 };
-
-export default Header;

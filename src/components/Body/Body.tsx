@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import './Body.css';
 import { BodyItem } from './Body-item';
-import { AppState } from '../../init/store';
-import { useAppSelector } from '../../hooks/useDispatch';
 import { filterBtn } from '../Header/Header';
+import { useAppSelector } from '../../hooks/useAppSelector';
+
 
 export const Body: FC = () => {
 
-  const filters = useAppSelector((state: AppState) => state.todos.filters);
-  const todos = useAppSelector((state: AppState) => state.todos.todos.filter(todo => {
+  const filters = useAppSelector((state) => state.todos.filters);
+  const todosData = useAppSelector((state) => state.todos.todosData.filter(todo => {
       if (filters === filterBtn.done) {
         return todo.completed;
       } else if (filters === filterBtn.active) {
@@ -23,7 +23,7 @@ export const Body: FC = () => {
     <>
       <div className="app-body">
         <ul className="wrap">
-          { todos.map((todo) => <BodyItem key={ todo.id } { ...todo } />) }
+          { todosData.map((todo) => <BodyItem key={ todo.id } { ...todo } />) }
         </ul>
       </div>
     </>

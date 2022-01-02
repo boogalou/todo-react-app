@@ -1,29 +1,34 @@
-import React, { ChangeEvent, FC, MouseEvent, KeyboardEvent } from 'react';
+import React, { ChangeEvent, FC, KeyboardEvent, MouseEvent, useState } from 'react';
 import './Footer.css';
-import { useAppDispatch, useAppSelector } from '../../hooks/useDispatch';
-import { AppState } from '../../init/store';
-import { addTask, textUpdateTask } from '../../bus/todos/action';
+import { useAppDispatch,  } from '../../hooks/useAppDispatch';
+
+// import { TODOS_FETCH_ASYNC } from '../../bus/todos/types';
+import { Button } from '../Button/Button';
+import { useAppSelector } from '../../hooks/useAppSelector';
+import { addTask } from '../../Reducers/todosSlice';
 
 export const Footer: FC = () => {
 
-
-  const titleMsg = useAppSelector((state: AppState) => state.todos.titleMsg);
   const dispatch = useAppDispatch();
+  const todo = useAppSelector((state) => state.todos.todosData);
+
+  const [title, setTitle] = useState('');
 
   const onChangeTextHandler = (evt: ChangeEvent<HTMLInputElement>): void => {
-    let text = evt.target.value;
-    dispatch(textUpdateTask(text));
+    setTitle(evt.target.value);
   };
 
-  const [ todo ] = useAppSelector((state) => state.todos.todos.map(todo => todo))
+
+  // console.log(todo.slice(-1)[0]);
 
   const addTaskHandler = (
     evt: KeyboardEvent<HTMLInputElement>
-    | MouseEvent<HTMLButtonElement>): void => {
+      | MouseEvent<HTMLButtonElement>): void => {
     if (('type' in evt && evt?.type === 'click')
-      || ('key' in evt && evt?.key === 'Enter')){
-      dispatch(addTask());
-      console.log(todo);
+      || ('key' in evt && evt?.key === 'Enter')) {
+      dispatch(addTask({ title }));
+      // dispatch({type: TODOS_FETCH_ASYNC, payload: todo.slice(-1)[0] })
+      setTitle('');
     }
   };
 
@@ -33,14 +38,16 @@ export const Footer: FC = () => {
         <input
           name=""
           type="text"
-          value={ titleMsg }
+          value={ title }
           className="input-text"
           placeholder="Add your task..."
           onChange={ onChangeTextHandler }
           onKeyDown={ addTaskHandler }
         />
-        <button onClick={ addTaskHandler } className="btn btn-add">Add
-        </button>
+        <Button
+          callback={ addTaskHandler }
+          className={'btn-add' }>Add
+        </Button>
       </div>
     </>
   );
