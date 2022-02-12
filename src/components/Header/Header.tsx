@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import styles from './Header.module.css';
 
 import { taskFilterSwitch } from '../../Reducers/todosSlice';
-import { Button } from '../Button/Button';
-import { useAppSelector } from '../../hooks/useAppSelector';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { Button } from '../../elements/Button/Button';
+import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+
 
 export enum filterBtn {
   all = 'Все',
@@ -35,21 +35,21 @@ export const Header: FC = () => {
           <div className={ styles.task__count }>
 
             <Button
-              className={ isActive === filterBtn.all ? `btn-total active` : filterBtn.all }
+              classes={ isActive === filterBtn.all ? `btn-total active` : filterBtn.all }
               callback={ toggleFilterHandler }
             >{ filterBtn.all }:
               { todosData.length }
             </Button>
 
             <Button
-              className={ isActive === filterBtn.done ? `btn-completed active` : filterBtn.all }
+              classes={ isActive === filterBtn.done ? `btn-completed active` : filterBtn.all }
               callback={ toggleFilterHandler }
             >{ filterBtn.done }:
               { done }
             </Button>
 
             <Button
-              className={ isActive === filterBtn.active ? `btn active` : filterBtn.all }
+              classes={ isActive === filterBtn.active ? `btn active` : filterBtn.all }
               callback={ toggleFilterHandler }
             >{ filterBtn.active }:
               { active }

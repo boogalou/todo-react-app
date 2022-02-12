@@ -1,40 +1,25 @@
-import React, { FC, ReactNode, useState, } from 'react';
-import styles from './Button.module.css';
-import classNames from 'classnames';
+import React, { FC, ReactNode, MouseEvent } from 'react';
+import cn from 'classnames';
 
+import styles from './Button.module.scss'
 
-type ButtonProps = {
-  active?: boolean;
+interface ButtonProps {
+  type: 'submit' | 'reset' | 'button' | undefined;
   children?: ReactNode;
-  className?: string;
+  classes?: string;
   disabled?: boolean;
-  callback?: (evt: React.MouseEvent<HTMLButtonElement> ) => void;
+  callback?: (evt: MouseEvent<HTMLButtonElement> ) => void;
 }
 
-export const Button: FC<ButtonProps> = ({active, callback, children, className, disabled}: ButtonProps) => {
-
-  const classes = classNames(styles.btn, styles[className!],  active );
-
-  const [isActive, setIsActive] = useState()
-
-  console.log(`btn>>`, classes, active);
-
+export const Button: FC<ButtonProps> = ({ callback, children, classes, disabled}: ButtonProps) => {
   return (
     <button
       onClick={ callback }
-      className={ classes }
-      disabled={ !disabled }
+      className={ cn(styles.btn, classes) }
+      disabled={ disabled }
     >
       { children }
     </button>
   );
 };
 
-Button.defaultProps = {
-  active: false,
-  className: styles.btn,
-  disabled: true,
-  children: 'Default button',
-  callback() {
-  },
-};

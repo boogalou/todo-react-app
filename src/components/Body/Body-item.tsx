@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { Button } from '../Button/Button';
+import { Button } from '../../elements/Button/Button';
 import { removeTask, setCompleted } from '../../Reducers/todosSlice';
+import { useAppDispatch } from '../../hooks/reduxHooks';
+
 
 type BodyItemProps = {
   id: string;
@@ -33,11 +34,11 @@ export const BodyItem: FC<BodyItemProps> = ({ id, title, completed }: BodyItemPr
           <div className="btn-block">
             <Button
               callback={ completedTaskHandler }
-              className={  completed  ? 'btn-done active' : 'btn-done' }>Ok
+              classes={  completed  ? 'btn-done active' : 'btn-done' }>Ok
             </Button>
             <Button
               callback={ removeTaskHandler }
-              className="btn-delete">Del.
+              classes="btn-delete">Del.
             </Button>
           </div>
         </div>

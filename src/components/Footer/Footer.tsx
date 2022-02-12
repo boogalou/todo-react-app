@@ -1,15 +1,13 @@
 import React, { ChangeEvent, FC, KeyboardEvent, MouseEvent, useState } from 'react';
 import './Footer.css';
-import { useAppDispatch,  } from '../../hooks/useAppDispatch';
-
-// import { TODOS_FETCH_ASYNC } from '../../bus/todos/types';
-import { Button } from '../Button/Button';
-import { useAppSelector } from '../../hooks/useAppSelector';
+import { useAppSelector, } from '../../hooks/reduxHooks';
+import { Button } from '../../elements/Button/Button';
 import { addTask } from '../../Reducers/todosSlice';
+import { useDispatch } from 'react-redux';
 
 export const Footer: FC = () => {
 
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
   const todo = useAppSelector((state) => state.todos.todosData);
 
   const [title, setTitle] = useState('');
@@ -18,16 +16,12 @@ export const Footer: FC = () => {
     setTitle(evt.target.value);
   };
 
-
-  // console.log(todo.slice(-1)[0]);
-
   const addTaskHandler = (
     evt: KeyboardEvent<HTMLInputElement>
       | MouseEvent<HTMLButtonElement>): void => {
     if (('type' in evt && evt?.type === 'click')
       || ('key' in evt && evt?.key === 'Enter')) {
       dispatch(addTask({ title }));
-      // dispatch({type: TODOS_FETCH_ASYNC, payload: todo.slice(-1)[0] })
       setTitle('');
     }
   };
@@ -46,7 +40,7 @@ export const Footer: FC = () => {
         />
         <Button
           callback={ addTaskHandler }
-          className={'btn-add' }>Add
+          classes={'btn-add' }>Add
         </Button>
       </div>
     </>

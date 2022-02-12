@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import './Body.css';
 import { BodyItem } from './Body-item';
 import { filterBtn } from '../Header/Header';
-import { useAppSelector } from '../../hooks/useAppSelector';
+import { useAppSelector } from '../../hooks/reduxHooks';
+
 
 
 export const Body: FC = () => {

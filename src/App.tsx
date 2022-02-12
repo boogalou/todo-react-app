@@ -5,17 +5,17 @@ import { Body } from './components/Body/Body';
 import { Footer } from './components/Footer/Footer';
 
 
-
 export const App: FC = ({}) => {
   return (
-    <div id="app-container" className="app-container">
-      <Header />
+    <>
+      <div id="app-container" className="app-container">
+        <Header/>
 
-      <Body/>
+        <Body/>
 
-      <Footer/>
-    </div>
-
+        <Footer/>
+      </div>
+    </>
   );
 };
 
