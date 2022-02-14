@@ -1,16 +1,21 @@
 import React, { FC, ReactNode } from 'react';
-import { useLocation, Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAppSelector } from '../hooks/reduxHooks';
+import { AppState } from '../init/store';
 
 export interface ReqAuthProps {
   children: ReactNode;
 }
 
-export const ReqAuth: FC<ReqAuthProps> = ({ children }: ReqAuthProps) => {
+const ReqAuth: FC<ReqAuthProps> = ({ children }: ReqAuthProps) => {
   const location = useLocation();
-  const auth = false;
+  const isAuth = useAppSelector((state: AppState) => state.auth.isAuth)
 
-  if (!auth) {
-    return <Navigate to='login' state={ { from: location.pathname } }/>;
+  console.log(isAuth);
+
+  if (!isAuth) {
+    console.log(isAuth);
+    return <Navigate to='/login' replace state={ { from: location.pathname } }/>;
   }
   return children as JSX.Element;
 };

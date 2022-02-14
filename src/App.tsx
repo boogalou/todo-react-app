@@ -1,11 +1,22 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import './App.css';
 import { Header } from './components/Header/Header';
 import { Body } from './components/Body/Body';
 import { Footer } from './components/Footer/Footer';
+import { useAppDispatch } from './hooks/reduxHooks';
+import { checkAuth } from './actions';
 
 
 export const App: FC = ({}) => {
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      dispatch(checkAuth());
+    }
+  }, []);
+
   return (
     <>
       <div id="app-container" className="app-container">

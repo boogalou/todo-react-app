@@ -6,17 +6,17 @@ import { Button } from '../../../elements/Button/Button';
 
 import { Link } from 'react-router-dom';
 import { useForm } from '../../../hooks/useForms';
-import { RegistrationData } from '../userAuth.interface';
+import { RegistrationRequest } from '../../../types/authRequest.interface';
 import { EMAIL, NAME } from '../regexp';
 import { useDispatch } from 'react-redux';
-import { asyncRequest } from '../../../actions';
+import { registrationRequest } from '../../../actions';
 
 
 export const Registration = () => {
 
   const dispatch = useDispatch();
 
-  const {data: user, changeHandler, submitHandler, errors} = useForm<RegistrationData>({
+  const {data: user, changeHandler, submitHandler, errors} = useForm<RegistrationRequest>({
     validations: {
       name: {
         required: {
@@ -63,7 +63,7 @@ export const Registration = () => {
       },
     },
 
-    onSubmit: () => dispatch(asyncRequest({
+    onSubmit: () => dispatch(registrationRequest({
         name: user.name,
         email: user.email,
         password: user.password,

@@ -1,6 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TodoItem } from '../types/todo.interface';
-import { v4 as uuidv4 } from 'uuid';
 
 
 export interface TodosState {
@@ -22,12 +21,10 @@ const todosSlice = createSlice({
   initialState,
 
   reducers: {
-    addTask(state, action) {
-      state.todosData.push({
-        id: uuidv4(),
-        title: action.payload.title,
-        completed: false
-      });
+    addTask(state, action: PayloadAction<TodoItem>) {
+      state.todosData.push(
+        action.payload
+      );
     },
 
     removeTask(state, action) {

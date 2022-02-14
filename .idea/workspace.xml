@@ -2,42 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/todo.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sagas/auth.saga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sagas/todo.saga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reducers/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/authSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Input.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth/Registration/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Registration/Registration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/regexp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/regexp.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/userAuth.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/userAuth.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/userAuth.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/authRequest.interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Button/Button.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/elements/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Input/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Input/InputField.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/ReqAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/ReqAuth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/reduxHooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/reduxHooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useForms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForms.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/init/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/AuthSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/AuthSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/auth.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/auth.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/AuthSaga.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/auth.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/authResponse.interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\types" />
       <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\Service" />
       <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\elements\Button" />
       <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\components\Auth\Registration" />
       <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\components\Auth\Login" />
-      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,7 +138,7 @@
       <workItem from="1644057842176" duration="982000" />
       <workItem from="1644120867063" duration="15000" />
       <workItem from="1644451680252" duration="51327000" />
-      <workItem from="1644577879908" duration="24791000" />
+      <workItem from="1644577879908" duration="70519000" />
     </task>
     <servers />
   </component>

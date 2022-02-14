@@ -1,5 +1,9 @@
 import { createAction } from '@reduxjs/toolkit';
-import { RegistrationData } from '../components/Auth/userAuth.interface';
+import { LoginRequest, RegistrationRequest } from '../types/authRequest.interface';
+import { TodoItem } from '../types/todo.interface';
 
-
-export const asyncRequest = createAction<RegistrationData>('asyncRequest');
+export const registrationRequest = createAction<RegistrationRequest>('registrationRequest');
+export const loginRequest = createAction<LoginRequest>('loginRequest');
+export const logoutRequest = createAction('logoutRequest');
+export const checkAuth = createAction('checkAuthRequest');
+export const todoCreate = createAction<TodoItem>('todoCreate');

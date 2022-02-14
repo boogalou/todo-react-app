@@ -1,24 +1,31 @@
-import React, { ChangeEvent, FC, useState } from 'react';
+import React, { FC, FormEvent } from 'react';
 
 import styles from '../Input.module.scss';
 import { InputField } from '../../../elements/Input/InputField';
 import { Button } from '../../../elements/Button/Button';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from '../../../hooks/useForms';
-import { RegistrationData } from '../userAuth.interface';
-
+import { LoginRequest } from '../../../types/authRequest.interface';
+import { loginRequest } from '../../../actions';
+import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks';
 
 export const Login: FC = () => {
 
-  const { data: user, changeHandler, submitHandler, errors } = useForm<RegistrationData>({
+  const dispatch = useAppDispatch();
+
+  const onSubmit = (evt: FormEvent) => {
+    evt.preventDefault();
+    console.log(`submit disabled`);
+  }
+
+  const {data: user, changeHandler, submitHandler, errors} = useForm<LoginRequest>({
     validations: {
       email: {
         pattern: {
           value: '^[a-zA-Z0-9.!#$%&\'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$',
           message: 'неккректная почта'
         },
-
         required: {
           value: true,
           message: 'обязательное поле',
@@ -36,16 +43,19 @@ export const Login: FC = () => {
       },
     },
 
-    onSubmit: () => setTimeout(() => {
-      alert(JSON.stringify(user, null, 2));
-    }), initialValues: {email: '', password: ''},
+    onSubmit: () => dispatch(loginRequest({
+        email: user.email,
+        password: user.password,
+      }
+    )), initialValues: {email: '', password: ''},
 
   });
+
 
   return (
     <>
       <div className={ styles.container }>
-        <form className={ styles.form } onSubmit={ submitHandler } noValidate={true}>
+        <form className={ styles.form } onSubmit={ submitHandler } noValidate={ true }>
           <h2 className={ styles.form__title }>Войти</h2>
 
           { errors.email && <span className="error">{ errors.email }</span> }
@@ -75,7 +85,7 @@ export const Login: FC = () => {
             <Button
               classes={ styles['btn--registration'] }
               disabled={ false }
-              type='submit'>
+            >
               Войти
             </Button>
             <span className={ styles.or }>или</span>
