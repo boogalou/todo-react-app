@@ -5,8 +5,7 @@ import { LoginRequest, RegistrationRequest } from '../types/authRequest.interfac
 
 class AuthService {
   public async login({email, password}: LoginRequest): Promise<AxiosResponse<ResponseAuthData>> {
-    return apiService.post<ResponseAuthData>(
-      `/login`, {email, password});
+    return apiService.post<ResponseAuthData>(`/login`, {email, password});
   }
 
   public async registration({name, email, password}: RegistrationRequest): Promise<AxiosResponse<ResponseAuthData>> {
@@ -22,6 +21,7 @@ class AuthService {
     const response = await axios.get<ResponseAuthData>(`http://localhost:7000/api/refresh`, {
       withCredentials: true
     });
+    return response
   }
 
 }
