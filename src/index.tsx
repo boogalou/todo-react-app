@@ -5,17 +5,15 @@ import './index.css';
 import { store } from './init/store';
 import { Provider } from 'react-redux';
 import { Routing } from './Routing';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={ store }>
-      <Router>
-        <Switch>
-          <Routing/>
-        </Switch>
-      </Router>
+      <BrowserRouter>
+        <Routing/>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

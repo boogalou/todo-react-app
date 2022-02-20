@@ -5,9 +5,9 @@ import { AxiosResponse } from 'axios';
 
 class TodoService {
 
-  public async create(todoData: TodoItem, userId: string): Promise<AxiosResponse<TodoItem>> {
+  public async create(todoData: TodoItem): Promise<AxiosResponse<TodoItem>> {
 
-    return apiService.post(`todos/create/${userId}`, todoData)
+    return await apiService.post(`/todos/newTodo`, todoData)
   }
 }
 

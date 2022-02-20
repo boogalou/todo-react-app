@@ -5,11 +5,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/todo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/todo.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/ReqAuth.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/todo.saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/todo.saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/todo.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/todo.interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +138,8 @@
       <workItem from="1644577879908" duration="73770000" />
       <workItem from="1645121587968" duration="2227000" />
       <workItem from="1645198844929" duration="3298000" />
-      <workItem from="1645271273499" duration="13430000" />
+      <workItem from="1645271273499" duration="17694000" />
+      <workItem from="1645340594161" duration="14333000" />
     </task>
     <servers />
   </component>

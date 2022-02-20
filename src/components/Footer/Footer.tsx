@@ -5,6 +5,8 @@ import './Footer.css';
 import { Button } from '../../elements/Button/Button';
 import { todoCreate } from '../../actions';
 import { TodoItem } from '../../types/todo.interface';
+import { useAppSelector } from '../../hooks/reduxHooks';
+import { AppState } from '../../init/store';
 
 export const Footer: FC = () => {
 
@@ -15,13 +17,19 @@ export const Footer: FC = () => {
     setTitle(evt.target.value);
   };
 
+  const userId = useAppSelector((store: AppState) => store.auth.user.id)
+
+
   const addTaskHandler = (
     evt: KeyboardEvent<HTMLInputElement>
       | MouseEvent<HTMLButtonElement>): void => {
     if (('type' in evt && evt?.type === 'click')
       || ('key' in evt && evt?.key === 'Enter')) {
 
-      dispatch(todoCreate({title, completed: false} as TodoItem)) ;
+      dispatch(todoCreate({
+        userId,
+        title,
+        completed: false} as TodoItem)) ;
 
       setTitle('');
     }

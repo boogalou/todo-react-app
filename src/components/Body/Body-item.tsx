@@ -5,20 +5,20 @@ import { useAppDispatch } from '../../hooks/reduxHooks';
 
 
 type BodyItemProps = {
-  id: string;
+  userId: string;
   title: string;
   completed: boolean;
 }
 
-export const BodyItem: FC<BodyItemProps> = ({ id, title, completed }: BodyItemProps) => {
+export const BodyItem: FC<BodyItemProps> = ({ userId, title, completed }: BodyItemProps) => {
 
   const dispatch = useAppDispatch();
 
   const completedTaskHandler = () => {
-    dispatch(setCompleted({id}));
+    dispatch(setCompleted({userId}));
   };
   const removeTaskHandler = () => {
-    dispatch(removeTask({id}));
+    dispatch(removeTask({userId}));
   };
 
   return (

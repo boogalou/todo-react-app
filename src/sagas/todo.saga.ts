@@ -7,9 +7,11 @@ import { addTask } from '../Reducers/todosSlice';
 
 
 function* createTodoWorker(action: ReturnType<typeof todoCreate>) {
+  console.log(action.payload);
   try {
     const response: AxiosResponse<TodoItem> = yield call(todoService.create, action.payload);
-    yield put(addTask(response.data))
+    console.log(response.data);
+    yield put(addTask({...response.data}))
   } catch (err) {
     console.error(err)
   }

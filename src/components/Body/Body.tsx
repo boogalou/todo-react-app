@@ -24,7 +24,7 @@ export const Body: FC = () => {
     <>
       <div className="app-body">
         <ul className="wrap">
-          { todosData.map((todo) => <BodyItem key={ todo.id } { ...todo } />) }
+          { todosData.map((todo) => <BodyItem key={ todo.userId } { ...todo } />) }
         </ul>
       </div>
     </>

@@ -4,11 +4,11 @@ import styles from '../Input.module.scss';
 import { InputField } from '../../../elements/Input/InputField';
 import { Button } from '../../../elements/Button/Button';
 
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useForm } from '../../../hooks/useForms';
 import { LoginRequest } from '../../../types/authRequest.interface';
 import { loginRequest } from '../../../actions';
-import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks';
+import { useAppDispatch } from '../../../hooks/reduxHooks';
 
 export const Login: FC = () => {
 

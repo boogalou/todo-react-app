@@ -3,9 +3,8 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import { Body } from './components/Body/Body';
 import { Footer } from './components/Footer/Footer';
-import { useAppDispatch, useAppSelector } from './hooks/reduxHooks';
+import { useAppDispatch } from './hooks/reduxHooks';
 import { checkAuth } from './actions';
-import { AppState } from './init/store';
 import { Login } from './components/Auth/Login/Login';
 
 
@@ -19,16 +18,16 @@ export const App: FC = ({}) => {
     }
   }, []);
 
-  const isAuth = useAppSelector((state: AppState) => state.auth.isAuth)
 
   return (
     <>
-      {!isAuth ? <Login /> :
+      {!localStorage.getItem('token') ? <Login /> :
       <div id="app-container" className="app-container">
         <Header/>
         <Body/>
         <Footer/>
-      </div>}
+      </div>
+      }
     </>
   );
 };

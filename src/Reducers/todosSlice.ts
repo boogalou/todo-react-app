@@ -29,12 +29,12 @@ const todosSlice = createSlice({
 
     removeTask(state, action) {
       state.todosData = state.todosData.filter(
-        todo => todo.id !== action.payload.id);
+        todo => todo.userId !== action.payload.userId);
     },
 
     setCompleted(state, action) {
       state.todosData.find(todo => {
-        if (todo.id === action.payload.id) {
+        if (todo.userId === action.payload.id) {
           todo.completed = !todo.completed;
         }
       });
@@ -46,5 +46,5 @@ const todosSlice = createSlice({
   }
 });
 
-export const { addTask, removeTask, setCompleted, taskFilterSwitch } = todosSlice.actions;
+export const { addTask, removeTask, setCompleted, taskFilterSwitch,  } = todosSlice.actions;
 export default todosSlice.reducer;
