@@ -6,4 +6,5 @@ export const registrationRequest = createAction<RegistrationRequest>('registrati
 export const loginRequest = createAction<LoginRequest>('loginRequest');
 export const logoutRequest = createAction('logoutRequest');
 export const checkAuth = createAction('checkAuthRequest');
-export const todoCreate = createAction<TodoItem>('todoCreate');
+export const todoCreate = createAction<TodoItem | TodoItem[]>('todoCreateRequest');
+export const getAllTodos = createAction<{data: { userId: string; }}>('gerAllTodosRequest')

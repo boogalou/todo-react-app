@@ -4,9 +4,9 @@ export interface ResponseAuthData {
   user: UserAuthData;
 }
 
-export type  UserAuthData = {
-  id: string;
-  name: string;
-  email: string;
+export type UserAuthData = {
+  _id: string;
+  _name: string;
+  _email: string;
   isActivated: boolean;
 }

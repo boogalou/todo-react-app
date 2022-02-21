@@ -1,5 +1,5 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import todosSlice from "../Reducers/todosSlice";
+import { combineReducers } from '@reduxjs/toolkit';
+import todosSlice from '../Reducers/todosSlice';
 import authSlice from '../Reducers/authSlice';
 
 

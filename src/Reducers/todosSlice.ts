@@ -7,13 +7,15 @@ export interface TodosState {
   filters: string;
   status: null | string;
   error: null | string;
-};
+  isFetch: boolean;
+}
 
 const initialState: TodosState = {
   todosData: [],
   filters: '',
   status: null,
   error: null,
+  isFetch: false
 };
 
 const todosSlice = createSlice({
@@ -21,15 +23,19 @@ const todosSlice = createSlice({
   initialState,
 
   reducers: {
-    addTask(state, action: PayloadAction<TodoItem>) {
-      state.todosData.push(
-        action.payload
-      );
+    addTask(state, action: PayloadAction<TodoItem | TodoItem[]>) {
+      if (Array.isArray(action.payload)) {
+       state.todosData = action.payload.map(item => item) ;
+      } else {
+        state.todosData.push(
+          action.payload
+        );
+      }
     },
 
     removeTask(state, action) {
       state.todosData = state.todosData.filter(
-        todo => todo.userId !== action.payload.userId);
+        todo => todo.id !== action.payload.id);
     },
 
     setCompleted(state, action) {
@@ -42,9 +48,13 @@ const todosSlice = createSlice({
 
     taskFilterSwitch(state, action) {
       state.filters = action.payload;
-    }
+    },
+
+    dataFetching(state) {
+      state.isFetch = !state.isFetch;
+    },
   }
 });
 
-export const { addTask, removeTask, setCompleted, taskFilterSwitch,  } = todosSlice.actions;
+export const { addTask, removeTask, setCompleted, taskFilterSwitch, dataFetching, } = todosSlice.actions;
 export default todosSlice.reducer;

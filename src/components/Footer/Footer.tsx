@@ -1,24 +1,21 @@
 import React, { ChangeEvent, FC, KeyboardEvent, MouseEvent, useState } from 'react';
-import { useDispatch } from 'react-redux';
 
 import './Footer.css';
 import { Button } from '../../elements/Button/Button';
 import { todoCreate } from '../../actions';
-import { TodoItem } from '../../types/todo.interface';
-import { useAppSelector } from '../../hooks/reduxHooks';
-import { AppState } from '../../init/store';
+import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+
 
 export const Footer: FC = () => {
 
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [title, setTitle] = useState('');
   const onChangeTextHandler = (evt: ChangeEvent<HTMLInputElement>): void => {
     setTitle(evt.target.value);
   };
 
-  const userId = useAppSelector((store: AppState) => store.auth.user.id)
-
+  const userId = useAppSelector(state => state.auth.user._id)
 
   const addTaskHandler = (
     evt: KeyboardEvent<HTMLInputElement>
@@ -26,13 +23,11 @@ export const Footer: FC = () => {
     if (('type' in evt && evt?.type === 'click')
       || ('key' in evt && evt?.key === 'Enter')) {
 
-      dispatch(todoCreate({
-        userId,
-        title,
-        completed: false} as TodoItem)) ;
+      dispatch(todoCreate({userId, title, completed: false} )) ;
 
       setTitle('');
     }
+
   };
 
   return (

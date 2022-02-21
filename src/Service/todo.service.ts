@@ -6,8 +6,11 @@ import { AxiosResponse } from 'axios';
 class TodoService {
 
   public async create(todoData: TodoItem): Promise<AxiosResponse<TodoItem>> {
+    return await apiService.post(`/todos/newTodo`, todoData);
+  }
 
-    return await apiService.post(`/todos/newTodo`, todoData)
+  public async getAll(userId: string): Promise<AxiosResponse<TodoItem[]>> {
+    return await apiService.get(`/todos/${ userId }`)
   }
 }
 

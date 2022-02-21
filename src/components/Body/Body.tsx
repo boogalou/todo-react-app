@@ -5,9 +5,9 @@ import { filterBtn } from '../Header/Header';
 import { useAppSelector } from '../../hooks/reduxHooks';
 
 
-
 export const Body: FC = () => {
 
+  const isFetch = useAppSelector(state => state.todos.isFetch)
   const filters = useAppSelector((state) => state.todos.filters);
   const todosData = useAppSelector((state) => state.todos.todosData.filter(todo => {
       if (filters === filterBtn.done) {
@@ -24,7 +24,7 @@ export const Body: FC = () => {
     <>
       <div className="app-body">
         <ul className="wrap">
-          { todosData.map((todo) => <BodyItem key={ todo.userId } { ...todo } />) }
+          {isFetch ? <div>loading...</div> : todosData.map((todo) => <BodyItem key={ todo._id} { ...todo } />) }
         </ul>
       </div>
     </>
