@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/types/completedRequest.interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/authSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/todo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/todo.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/rootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/auth.saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/auth.saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sagas/todo.saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/todo.saga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/authResponse.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/authResponse.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/todo.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/todo.interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +131,8 @@
       <workItem from="1645198844929" duration="3298000" />
       <workItem from="1645271273499" duration="17694000" />
       <workItem from="1645340594161" duration="14783000" />
-      <workItem from="1645424774638" duration="24488000" />
+      <workItem from="1645424774638" duration="25370000" />
+      <workItem from="1645521437322" duration="19681000" />
     </task>
     <servers />
   </component>

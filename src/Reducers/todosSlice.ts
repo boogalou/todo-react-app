@@ -35,12 +35,12 @@ const todosSlice = createSlice({
 
     removeTask(state, action) {
       state.todosData = state.todosData.filter(
-        todo => todo.id !== action.payload.id);
+        todo => todo._id !== action.payload._id);
     },
 
     setCompleted(state, action) {
       state.todosData.find(todo => {
-        if (todo.userId === action.payload.id) {
+        if (todo._id === action.payload._id) {
           todo.completed = !todo.completed;
         }
       });

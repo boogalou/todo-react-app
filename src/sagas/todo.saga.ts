@@ -1,5 +1,5 @@
-import { call, put, takeLatest, takeEvery } from 'redux-saga/effects';
-import { getAllTodos, todoCreate } from '../actions';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { todoCompleted, todoCreate, todoDelete } from '../actions';
 import { todoService } from '../Service/todo.service';
 import { TodoItem } from '../types/todo.interface';
 import { AxiosResponse } from 'axios';
@@ -17,10 +17,22 @@ function* createTodoWorker(action: ReturnType<typeof todoCreate>) {
   }
 }
 
-function* getAllTodosWorker(action: ReturnType<typeof getAllTodos>) {
+function* todoCompletedWorker(action: ReturnType<typeof todoCompleted>) {
   try {
-    console.log(action.payload);
-    const response: AxiosResponse<TodoItem[]> = yield call(todoService.getAll, action.payload)
+    put(dataFetching());
+    yield call(todoService.completed, action.payload);
+    put(dataFetching());
+  } catch (err) {
+    console.error(err);
+  }
+
+}
+
+function* todoDeleteWorker(action: ReturnType<typeof todoDelete>) {
+  try {
+    put(dataFetching());
+    yield call(todoService.deleteTodo, action.payload);
+    put(dataFetching());
   } catch (err) {
     console.error(err);
   }
@@ -29,6 +41,7 @@ function* getAllTodosWorker(action: ReturnType<typeof getAllTodos>) {
 
 export function* todoWatcherSaga() {
   yield takeLatest(todoCreate.type, createTodoWorker);
-  yield takeEvery(getAllTodos.type, getAllTodosWorker)
+  yield takeLatest(todoCompleted.type, todoCompletedWorker);
+  yield takeLatest(todoDelete.type, todoDeleteWorker);
 }
 
