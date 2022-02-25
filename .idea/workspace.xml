@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/types/completedRequest.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/ReqAuth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/todosSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/todo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/todo.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/todo.saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/todo.saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +20,8 @@
       <list>
         <option value="CSS File" />
         <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -132,7 +132,9 @@
       <workItem from="1645271273499" duration="17694000" />
       <workItem from="1645340594161" duration="14783000" />
       <workItem from="1645424774638" duration="25370000" />
-      <workItem from="1645521437322" duration="19681000" />
+      <workItem from="1645521437322" duration="20327000" />
+      <workItem from="1645630370258" duration="16328000" />
+      <workItem from="1645686129243" duration="2218000" />
     </task>
     <servers />
   </component>

@@ -3,9 +3,13 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import { Body } from './components/Body/Body';
 import { Footer } from './components/Footer/Footer';
-import { useAppDispatch, useAppSelector } from './hooks/reduxHooks';
-import { checkAuth, getAllTodos } from './actions';
+import { useAppDispatch } from './hooks/reduxHooks';
+import { checkAuth } from './actions';
+import { Route, Routes } from 'react-router-dom';
 import { Login } from './components/Auth/Login/Login';
+import { Registration } from './components/Auth/Registration/Registration';
+import PrivateRoute from './hoc/ReqAuth';
+import { Home } from './components/home';
 
 
 export const App: FC = ({}) => {
@@ -19,13 +23,21 @@ export const App: FC = ({}) => {
 
   return (
     <>
-      { !localStorage.getItem('token') ? <Login/> :
-        <div id="app-container" className="app-container">
-          <Header/>
-          <Body/>
-          <Footer/>
-        </div>
-      }
+
+      <Routes>
+        <Route path="/" element={
+          <PrivateRoute>
+            <Home/>
+          </PrivateRoute>
+        }/>
+
+
+        <Route path="/login" element={ <Login/> }/>
+        <Route path="/registration" element={ <Registration/> }/>
+      </Routes>
+
+
+
     </>
   );
 };

@@ -14,11 +14,6 @@ export const Login: FC = () => {
 
   const dispatch = useAppDispatch();
 
-  const onSubmit = (evt: FormEvent) => {
-    evt.preventDefault();
-    console.log(`submit disabled`);
-  }
-
   const {data: user, changeHandler, submitHandler, errors} = useForm<LoginRequest>({
     validations: {
       email: {
