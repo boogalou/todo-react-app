@@ -24,7 +24,7 @@ export const Body: FC = () => {
     <>
       <div className="app-body">
         <ul className="wrap">
-          {isFetch ? <div>loading...</div> : todosData.map((todo) => <BodyItem key={ todo._id} { ...todo } />) }
+          {isFetch ? <div>loading...</div> : todosData.map((todo) => <BodyItem key={ todo._id } { ...todo } />) }
         </ul>
       </div>
     </>

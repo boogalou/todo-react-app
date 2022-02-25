@@ -3,15 +3,11 @@ import { Button } from '../../elements/Button/Button';
 import { removeTask, setCompleted } from '../../Reducers/todosSlice';
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { todoCompleted, todoDelete } from '../../actions';
+import { TodoItem } from '../../types/todo.interface';
 
-type BodyItemProps = {
-  _id: string
-  userId: string;
-  title: string;
-  completed: boolean;
-}
 
-export const BodyItem: FC<BodyItemProps> = ({_id, userId, title, completed}: BodyItemProps) => {
+
+export const BodyItem: FC<TodoItem> = ({_id, userId, title, completed}: TodoItem) => {
 
   const dispatch = useAppDispatch();
 

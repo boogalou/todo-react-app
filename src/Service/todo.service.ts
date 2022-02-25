@@ -11,6 +11,7 @@ class TodoService {
   }
 
   public async getAll(userId: string): Promise<AxiosResponse<TodoItem[]>> {
+    console.log('getAll>>', userId);
     return await apiService.get(`/todos/${ userId }`);
   }
 

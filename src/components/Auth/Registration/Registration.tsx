@@ -128,7 +128,7 @@ export const Registration = () => {
             <Button
               classes={ styles['btn--registration'] }
               disabled={ false }
-              type={ 'submit' }>
+              >
               Регистрация
             </Button>
             <span className={ styles.or }>или</span>

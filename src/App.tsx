@@ -1,8 +1,5 @@
 import React, { FC, useEffect } from 'react';
 import './App.css';
-import { Header } from './components/Header/Header';
-import { Body } from './components/Body/Body';
-import { Footer } from './components/Footer/Footer';
 import { useAppDispatch } from './hooks/reduxHooks';
 import { checkAuth } from './actions';
 import { Route, Routes } from 'react-router-dom';

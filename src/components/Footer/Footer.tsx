@@ -15,15 +15,15 @@ export const Footer: FC = () => {
     setTitle(evt.target.value);
   };
 
-  const userId = useAppSelector(state => state.auth.user._id)
-
+  const userId = useAppSelector(state => state.auth.user._id);
   const addTaskHandler = (
     evt: KeyboardEvent<HTMLInputElement>
       | MouseEvent<HTMLButtonElement>): void => {
     if (('type' in evt && evt?.type === 'click')
       || ('key' in evt && evt?.key === 'Enter')) {
 
-      dispatch(todoCreate({userId, title, completed: false} )) ;
+
+      dispatch(todoCreate({userId, title, completed: false}));
 
       setTitle('');
     }
@@ -44,7 +44,7 @@ export const Footer: FC = () => {
         />
         <Button
           callback={ addTaskHandler }
-          classes={'btn-add' }>Add
+          classes={ 'btn-add' }>Add
         </Button>
       </div>
     </>
