@@ -2,11 +2,12 @@ import { apiService } from '../api';
 import { TodoItem } from '../types/todo.interface';
 import { AxiosResponse } from 'axios';
 import { CompletedRequest } from '../types/completedRequest.interface';
+import { TodoCreate } from '../types/todo.create.interface';
 
 
 class TodoService {
 
-  public async create(todoData: TodoItem): Promise<AxiosResponse<TodoItem>> {
+  public async create(todoData: TodoCreate): Promise<AxiosResponse<TodoItem>> {
     return await apiService.post(`/todos/newTodo`, todoData);
   }
 

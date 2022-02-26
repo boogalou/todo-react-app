@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/types/todo.create.interface.ts" afterDir="false" />
+    <list default="true" id="d0f7ac96-df76-4714-959f-2691b1e6892c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routing.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/todo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/todo.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Registration/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Registration/Registration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/Body.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/todo.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/todo.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,137 +20,38 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="1ynxib3lhs7BCSU6jIA1XeeehA9" />
+  <component name="ProjectId" id="25bOyaXotiHlY3V32u3elEPpKRB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\types" />
-      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\Service" />
-      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\elements\Button" />
-      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\components\Auth\Registration" />
-      <recent name="C:\Users\exanz\Documents\Code\WebDev\front\todo-react-app\src\components\Auth\Login" />
-    </key>
-  </component>
-  <component name="RunManager" selected="npm.build">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.start" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4aa9a5d6-0a06-4d37-9e52-2c3ebe584865" name="Changes" comment="" />
-      <created>1632901287789</created>
+      <changelist id="d0f7ac96-df76-4714-959f-2691b1e6892c" name="Changes" comment="" />
+      <created>1645792583958</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632901287789</updated>
-      <workItem from="1632901290202" duration="38677000" />
-      <workItem from="1633170676169" duration="1070000" />
-      <workItem from="1633185162473" duration="734000" />
-      <workItem from="1633473427904" duration="4054000" />
-      <workItem from="1633514821789" duration="26494000" />
-      <workItem from="1633593327057" duration="48013000" />
-      <workItem from="1633770649974" duration="2918000" />
-      <workItem from="1633860818307" duration="609000" />
-      <workItem from="1633869044706" duration="32000" />
-      <workItem from="1633870015559" duration="33000" />
-      <workItem from="1633966464761" duration="858000" />
-      <workItem from="1634154687481" duration="1000" />
-      <workItem from="1634421563959" duration="7200000" />
-      <workItem from="1634457780493" duration="17604000" />
-      <workItem from="1634568237212" duration="665000" />
-      <workItem from="1640299657459" duration="1349000" />
-      <workItem from="1640527826177" duration="160000" />
-      <workItem from="1640530144439" duration="361000" />
-      <workItem from="1640869055212" duration="290000" />
-      <workItem from="1641159767601" duration="9965000" />
-      <workItem from="1641923657361" duration="2223000" />
-      <workItem from="1641928796412" duration="1571000" />
-      <workItem from="1641945276508" duration="607000" />
-      <workItem from="1642346362672" duration="758000" />
-      <workItem from="1642435012833" duration="203000" />
-      <workItem from="1643297631061" duration="17983000" />
-      <workItem from="1643324748292" duration="11974000" />
-      <workItem from="1643371885511" duration="11582000" />
-      <workItem from="1643385465954" duration="6082000" />
-      <workItem from="1643636008840" duration="16000" />
-      <workItem from="1643843120044" duration="185000" />
-      <workItem from="1644057842176" duration="982000" />
-      <workItem from="1644120867063" duration="15000" />
-      <workItem from="1644451680252" duration="51327000" />
-      <workItem from="1644577879908" duration="73770000" />
-      <workItem from="1645121587968" duration="2227000" />
-      <workItem from="1645198844929" duration="3298000" />
-      <workItem from="1645271273499" duration="17694000" />
-      <workItem from="1645340594161" duration="14783000" />
-      <workItem from="1645424774638" duration="25370000" />
-      <workItem from="1645521437322" duration="20327000" />
-      <workItem from="1645630370258" duration="16328000" />
-      <workItem from="1645686129243" duration="11768000" />
+      <updated>1645792583958</updated>
+      <workItem from="1645792599639" duration="2256000" />
+      <workItem from="1645825385408" duration="694000" />
+      <workItem from="1645867620915" duration="1554000" />
+      <workItem from="1645871455825" duration="325000" />
     </task>
     <servers />
   </component>
