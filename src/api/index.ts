@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = `http://localhost:7000/api`;
+export const API_URL = `https://todo-back-app.herokuapp.com/api`;
 
 const apiService = axios.create({
   withCredentials: true,

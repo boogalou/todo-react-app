@@ -18,7 +18,7 @@ class AuthService {
   }
 
   public async checkAuth() {
-    const response = await axios.get<ResponseAuthData>(`http://localhost:7000/api/refresh`, {
+    const response = await axios.get<ResponseAuthData>(`https://todo-back-app.herokuapp.com/api/refresh`, {
       withCredentials: true
     });
     return response
